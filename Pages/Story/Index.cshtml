@@ -1,0 +1,28 @@
+﻿@page
+@model HREntity.Pages.Story.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Testimonial Section </h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.Testimonial)
+        { 
+        <div class="col-lg-6">
+            <h1 class="text-lg-center">@Html.DisplayFor(modelItem => item.Name) </h1>
+            <h3>@Html.DisplayFor(modelItem => item.Email) </h3>
+            <p>  @Html.DisplayFor(modelItem => item.Comment)</p>
+            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-danger">Edit</a> |
+            <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-warning">Details</a> |
+            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-primary">Delete</a>
+        </div>
+        }
+    </div>
+</div>

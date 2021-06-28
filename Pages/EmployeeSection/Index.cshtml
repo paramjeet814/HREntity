@@ -1,0 +1,120 @@
+﻿@page
+@model HREntity.Pages.EmployeeSection.IndexModel
+
+@{ ViewData["Title"] = "Index"; }
+<style>
+    .about_us {
+        background-color: #f8f9fa;
+    }
+
+    .main_about {
+        display: flex;
+        padding-top: 30px
+    }
+
+    .head_about {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px;
+    }
+
+    .about-lg-col {
+        flex: 33.33%;
+        max-width: 33.33%;
+        font-size: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+        font-style: normal;
+        padding-left: 70px;
+        color: #f35b04;
+    }
+
+    .sub-sub-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+    }
+    </style>
+
+    <h1 > Index</h1 >
+
+    <section class="about_us" >
+    <div class="head_about" >
+    <div class="main_about" >
+    <div class="left-coloum-about-us" >
+    <div class="main-heading" >
+    <span class="sub-title" > _______ About US</span >
+    <h3 class="sub-sub-title" > Leave Your  Impact</h3 >
+    </div >
+    </div >
+    <div class="about-lg-col" >
+        <p>
+            Workforce Optimization Software, employee productivity tracking, employee task tracking Improve team productivity by 30%. Stay organized and manage team members
+        </p>
+    </div >
+    <div class="about-lg-col">
+        <p>
+            Workforce Optimization Software, employee productivity tracking, employee task tracking Improve team productivity by 30%. Stay organized and manage team members
+        </p>
+    </div>
+    </div >
+    </div >
+    </section >
+
+    <p >
+    <a asp-page="Create" > Create New</a >
+    </p >
+    <table class="table" >
+    <thead >
+    <tr >
+    <th >
+    @Html.DisplayNameFor(model => model.Employee[0].Name)
+    </th >
+    <th >
+    @Html.DisplayNameFor(model => model.Employee[0].Address)
+    </th >
+    <th >
+    @Html.DisplayNameFor(model => model.Employee[0].Email)
+    </th >
+    <th >
+    @Html.DisplayNameFor(model => model.Employee[0].Contact)
+    </th >
+    <th >
+    @Html.DisplayNameFor(model => model.Employee[0].Qualification)
+    </th >
+    <th > </th >
+    </tr >
+    </thead >
+    <tbody >
+    @foreach (var item in Model.Employee)
+        {
+ <tr >
+    <td >
+    @Html.DisplayFor(modelItem => item.Name)
+    </td >
+    <td >
+    @Html.DisplayFor(modelItem => item.Address)
+    </td >
+    <td >
+    @Html.DisplayFor(modelItem => item.Email)
+    </td >
+    <td >
+    @Html.DisplayFor(modelItem => item.Contact)
+    </td >
+    <td >
+    @Html.DisplayFor(modelItem => item.Qualification)
+    </td >
+    <td >
+    <a asp-page="./Edit" asp-route-id="@item.Id" > Edit</a > |
+    <a asp-page="./Details" asp-route-id="@item.Id" > Details</a > |
+    <a asp-page="./Delete" asp-route-id="@item.Id" > Delete</a >
+    </td >
+    </tr >}
+    </tbody >
+    </table >

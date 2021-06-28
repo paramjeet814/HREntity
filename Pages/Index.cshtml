@@ -1,0 +1,83 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+
+    .services-big {
+        display: flex;
+    }
+
+    .services {
+        display: flex;
+        margin: 25px;
+    }
+
+        .services .box {
+            border: 2px solid rgb(112, 107, 107);
+            background-color: rgb(224, 221, 221);
+            padding: 10px;
+            border-radius: 23px;
+        }
+
+            .services .box img {
+                height: 140px;
+                margin: auto;
+                display: block;
+            }
+
+            .services .box p {
+                font-family: 'Playball', cursive;
+            }
+
+    .h-secondary {
+        font-family: 'Balthazar', serif;
+        padding: 5px;
+    }
+
+    </style>
+
+
+
+<div class="row">
+
+    <section class="services-container">
+        <h1 class="h-primary center text-center">
+            HR Application
+        </h1>
+        <div class="services-big">
+            <div class="services">
+                <div class="box">
+                    
+                    <h2 class="h-secondary center">HR Application</h2>
+                    <p>
+                        The asset management tool for developers to collaborate & fix incidents faster. Robust SLAS & self-service mgmt. Start a free trial of Jira Service Desk™! Better Customer Support
+                    </p>
+                </div>
+
+            </div>
+            <div class="services">
+                <div class="box">
+                    
+                    <h2 class="h-secondary center">What is HR Application</h2>
+                    <p>
+                        What are HR Applications? HRIS (human resources information system) is a type of business application that enables companies to store employee information
+                    </p>
+                </div>
+
+            </div>
+            <div class="services">
+                <div class="box">
+                    
+                    <h2 class="h-secondary center">HR System</h2>
+                    <p>
+                        Human Resource Information System (HRIS) software enables users to efficiently manage, automate, and streamline HR-related tasks such as payroll, recruiting ...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
